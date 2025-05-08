@@ -13,13 +13,14 @@ vim.keymap.set("n", "<leader>P", '"+P', { desc = "从剪贴板粘贴到光标前
 vim.keymap.set("v", "<leader>p", '"+p', { desc = "粘贴到选中的区域" })
 vim.keymap.set("v", "<leader>P", '"+P', { desc = "粘贴到选中的区域" })
 
--- 切换输入法函数 (fcitx4)
+-- 切换至英文输入模式
 local function switch_input_en()
-  vim.fn.jobstart("fcitx-remote -c")
+  vim.fn.jobstart("fcitx-remote -r") -- 切换为英文模式
 end
 
+-- 切换至中文输入模式
 local function switch_input_zh()
-  vim.fn.jobstart("fcitx-remote -o")
+  vim.fn.jobstart("fcitx-remote -o") -- 切换为中文模式
 end
 
 -- i模式 jj => 切英文 + 退出插入
