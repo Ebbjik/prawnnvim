@@ -1,0 +1,6 @@
+-- lua/plugins/comment.lua
+return {
+  "numToStr/Comment.nvim",
+  lazy = false,
+  opts = {},
+}
